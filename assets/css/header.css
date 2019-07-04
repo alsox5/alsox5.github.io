@@ -1,0 +1,115 @@
+.layout-cabecalho {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    background-color: #3f729b;
+    box-shadow: 5px 5px 5px #95a4a5;
+}
+
+.layout-cabecalho--home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+ /*--------------------*\
+        NAVEGAÇÃO
+ \*--------------------*/
+
+ .navegacao {
+
+}
+
+.navegacao-titulo {
+
+    float: left;
+
+    line-height: 35px;   
+}
+
+.navegacao__menu {
+
+    float: right;
+}
+
+
+
+.navegacao-titulo a {
+    color: #eee;
+    text-decoration: none;
+}
+
+
+ /*--------------------*\
+      BLOCO-DE-MENU
+ \*--------------------*/
+
+ .menu {
+    
+    margin: 0;
+    
+    font-size: 18px;
+
+    list-style: none;
+ }
+
+ .menu__item a {
+  
+    padding: 15px 20px;
+
+    color: #fc0;
+
+    text-decoration: none;
+ }
+
+ 
+.menu__item a:hover {
+
+  border-radius: 12px;
+
+  background-color: #F0F8FF;
+
+}
+
+ @media(max-width: 991px) {
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    
+        display: none;
+        padding: 20px;
+        width: 200px;
+      
+        border-right: 1px solid #eee;
+        background-color: #fbfbfb;
+    
+        line-height: normal;
+     }
+
+     .menu--exibindo {
+         display: block;
+     }
+
+    .menu__item {
+        display: block;
+   
+        line-height: 3;
+    }
+
+ }
+
+ @media(min-width: 992px) {
+     .menu__item {
+         display: inline-block;
+         padding-right: 20px;
+
+     }
+
+     .menu__item:last-of-type {
+         padding-right: 0px;
+     }
+ }

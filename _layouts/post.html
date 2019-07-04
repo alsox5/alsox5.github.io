@@ -1,0 +1,40 @@
+<!--
+DOCTYPE html>
+layout: default
+---
+
+<div class="layout-post">
+    <div class="container">
+
+        <div class="row">
+            {% for post in site.posts %}
+
+            <div class="col-sm-4">
+                <a href={{ post.url }}>
+                    <article class="post">
+
+                        <div class="post__data">
+                            <strong>
+                                {{ post.date | date_to_string }}
+                            </strong>
+                        </div>
+
+                        <h2 class="post__titulo">
+                            <strong>
+                                {{ post.title }}
+                            </strong>
+                        </h2>
+
+                        <div class="post__descricao">
+                            <p>{{ post.descricao }}</p>
+                        </div>
+
+                    </article>
+                </a>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+-->
