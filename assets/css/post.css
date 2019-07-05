@@ -5,25 +5,53 @@
     margin-top: 30px;
 }
 
-.col-sm-4 a {
+#link-url {
     text-decoration: none;
 
 }
 
 .post {  
-    width: 350px;
+
+    float: left;
+
+    width: 90%;
     height: 280px;
      
     margin-top: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-left: 20px;
+    
+    padding-left: 15px;
+    padding-right: 15px;
 
     background-color: #F0F8FF;
 
     box-shadow: 5px 5px 5px #95a4a5;
     border: 0.5px solid ;
-    border-radius: 3%;
+    border-radius: 2%;
  }
+
+
+ @media(min-width:600px){
+     .post {
+        width: 70%;
+     }
+    
+ }
+
+ @media(min-width:800px){
+    .post {
+       width: 40%;
+    }
+   
+}
+
+@media(min-width:1000px){
+    .post {
+       width: 30%;
+    }
+   
+}
+
 
  .post:hover {
     background-color: #95a4a5;
@@ -36,7 +64,7 @@
      text-align: left;
      
      font-weight: normal;
-     font-size: 2.8rem;
+     font-size: 25px;;
  }
  
  .post__data {
@@ -75,24 +103,3 @@
      
  }
  
-
- /*--------------------*\
-           Botão
- \*--------------------*/
-
- .botao {
- 
-    display: inline-block;
-    padding: 10px;
-    width: 350px;
-
-    background-color: #95a4a5;
-    color: white;
-    border: none;
-    border-radius: 9%;
-    
-    line-height: normal;
-    font-size: 1em;
-    text-decoration: none;
-    
-}
