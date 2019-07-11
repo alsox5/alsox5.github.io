@@ -16,9 +16,10 @@
 }
 
 .barra-titulo a {
+    width: 100px;
     color: #eee;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
 
     line-height: 70px;
