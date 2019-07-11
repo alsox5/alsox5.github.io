@@ -19,8 +19,8 @@
     }
 
     span {
-        width: 40px;
-        height: 5px;
+        width: 25px;
+        height: 3px;
         
         top: 30px;
         left: -40px;
@@ -31,9 +31,9 @@
 
     span:before {
         content: '';
-        width: 40px;
-        height: 5px;
-        bottom: -12px;
+        width: 25px;
+        height: 3px;
+        bottom: -7px;
         position: absolute;
         background-color: #fff;
         transition: all .2s linear;
@@ -41,9 +41,9 @@
 
     span:after {
         content: '';
-        width: 40px;
-        height: 5px;
-        top: -12px;
+        width: 25px;
+        height: 3px;
+        top: -7px;
         position: absolute;
         background-color: #fff;
         transition: all .2s linear;
@@ -54,16 +54,17 @@
     }
 
     #check:checked  ~ label span:before{
-        transform: translate(0px, -12px) rotate(-45deg);
+        transform: translate(0px, -7px) rotate(-45deg);
     }
 
     #check:checked  ~ label span:after{
-        transform: translate(0px, 12px) rotate(45deg);
+        transform: translate(0px, 7px) rotate(45deg);
     }
 
+    /*
     #check:checked ~ label{
         border-radius: 50%;
-    }
+    }*/
 
     #check:checked ~ .menu {
         opacity: 1;
@@ -71,6 +72,7 @@
         margin-top: 70px;
         transition-delay: .2s;
     }
+    
 }
 
 @media(min-width:1000px){
