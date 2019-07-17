@@ -127,13 +127,13 @@
         background-color: #fff;
         border: 0.5px solid #050542;
     }
-
-    .menu_item ul li a: {
+/*
+    .menu_item ul li a:hover {
         background-color: #050542;
         color: #fff;
     }
-
-    .menu_item:active ul li{  
+*/
+    .menu_item:enabled ul li{  
         height: auto;
         max-height: 200px;
     } 
