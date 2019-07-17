@@ -49,50 +49,46 @@
 
 @media(min-width:799px) {
 
-.barra_menu {
-    width: 80%;
-    height: 50px;
-    margin-left: 50%;
-    margin-right: 10%;
-}
+    .barra_menu {
+        width: 80%;
+        height: 50px;
+        margin-left: 50%;
+        margin-right: 10%;
+    }
 
-.barra_menu .menu {
-    list-style: none;
-    position: relative;
-    
-}
+    .barra_menu .menu {
+        list-style: none;
+        position: relative;
+        
+    }
 
-.menu .menu_item {
-    width: 160px;
-    float: left;
-}
+    .menu .menu_item {
+        width: 160px;
+        float: left;
+    }
 
-.menu_item ul li {
-    list-style: none;
-    border: 1px solid #050542;
-}
+    .menu_item ul li {
+        list-style: none;
+        border: 1px solid #050542;
+    }
 
-.menu li ul {
-    margin-top: 1px;
-    position: absolute;
-    visibility: hidden;
-}
+    .menu li ul {
+        margin-top: 1px;
+        position: absolute;
+        visibility: hidden;
+    }
 
-.menu_item:hover ul {
-    width: 160px;
-    visibility: visible;
-}
-
-/* #3f729b;*/
-/* #191970*/
-
+    .menu_item:hover ul {
+        width: 160px;
+        visibility: visible;
+    }
 
 }
 
 @media(max-width: 800px) {
     
     .barra_titulo {
-        width: 90%;
+        width: 80%;
     }
     
     .barra_menu {
@@ -114,7 +110,7 @@
     
      .menu_item {
         float: none;        
-        width: 50%;
+        width: 100%;
         border: 0.5px solid #050542;
     }
 
@@ -132,12 +128,12 @@
         border: 0.5px solid #050542;
     }
 
-    .menu_item ul li a:hover {
+    .menu_item ul li a: {
         background-color: #050542;
         color: #fff;
     }
 
-    .menu_item:hover ul li{  
+    .menu_item:active ul li{  
         height: auto;
         max-height: 200px;
     } 
