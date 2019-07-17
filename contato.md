@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /contato/
 ---
 
 <div class="quadro_contato">
