@@ -1,0 +1,30 @@
+
+    .quadro_contato {    
+        margin: 0 auto;
+    }
+
+    img {
+        width: 250px;
+        height: 330px;
+        margin-right: 5px;
+        border: 10px solid #050542;
+    }
+
+    .dados {
+        width: 600px;
+        height: 100%;
+
+        font-size: 18px;
+        padding-left: 100px;
+        color: #fff;
+
+        font-weight: bold;
+        background-color: #444;
+        border: 10px solid #050542;
+        float: right;
+    }
+
+    .dados > h2 {
+        color: #fc0;
+    }
+

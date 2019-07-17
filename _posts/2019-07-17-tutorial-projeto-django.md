@@ -1,12 +1,12 @@
 ---
 layout: page
-title:  "Parte I: Desenvolvendo um projeto web com Django 2.x"
-date:   2019-07-12 21:21
-descricao: "Passo a Passo de como criar uma projeto completo com banco de dados e customização do django admin."
+title:  "Parte II: Desenvolvendo um projeto web com Django 2.x"
+date:   2019-07-17 16:37
+descricao: "Prosseguindo com asso a Passo de como criar uma projeto completo com banco de dados e customização do django admin."
 ---
 
 
-# TUTORIAL 01
+# TUTORIAL 02
 
 ### Usando o terminal.
 
@@ -157,22 +157,3 @@ python manage.py createsuperuser
 ```
    
 #### Obs.: o sistema pede pra que você cadastre o usuario e a senha
-
-## Agora vamos testar o que já fizemos:
-
-```
-
-python manage.py runserver
-
-```
-
-## No navegador digite :
-
-```
-http://127.0.0.1:4000/admin
-```
-
-### Se aparecer a tela de login, então ta tudo certo..
-<br>
-<br>
-<br>

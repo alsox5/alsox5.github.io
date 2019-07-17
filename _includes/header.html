@@ -1,26 +1,36 @@
-<header class="barra-superior">
-    <nav class="container">
 
-        <div class="barra-titulo"><a href="/">alsox5</a></div>
+    
+        <header class="barra_cabecalho">
 
-        <div class="barra-menu">
-
-            <!--
-            <input type="checkbox" id="check">
-            <label id="icone" for="check"><img src="../assets/img/icone.png" alt=""></label>-->
-            
+            <div class="barra_titulo">
+                <a href="/">Alsox5 Blog</a>
+            </div>
+             
             <input type="checkbox" id="check">
             <label id="icone" for="check"><span></span></label>
         
-            <ul class="menu"> 
-                <li class="menu-item"><a href="../tutoriais/">TUTORIAIS</a></li>
-                <li class="menu-item"><a href="{{ '../blog/'  | relative_url }}">BLOG</a></li>
-                <li class="menu-item"><a href="">PORTFÓLIO</a></li>
-                <li class="menu-item"><a href="{{ '../cursos/'  | relative_url }}">CURSOS</a></li>
-                <li class="menu-item"><a href="{{ '../contato/' | relative_url }}">CONTATO</a></li>
-     
-            </ul>
-        </div>
-    </nav>
 
-</header>
+            <nav class="barra_menu">
+                <ul class="menu">
+                    <li class="menu_item"><a href="">TUTORIAIS</a>
+                        <ul>
+                            <li><a href="">PYTHON</a></li>
+                            <li><a href="">DJANGO</a></li>
+                            <li><a href="">HTML5 - CSS3</a></li>
+                            <li><a href="">JAVASCRIPT</a></li>
+                            <li><a href="">DIVERSOS</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_item"><a href="http://www.conhecimentodigital.com.br/hotsite/front_end_i_2" target="_blank">CURSOS</a></li>
+                    <li class="menu_item"><a href="">PORTIFÓLIO</a>
+                        <ul>
+                            <li><a href="">FRONTEND</a></li>
+                            <li><a href="">BACKEND</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu_item"><a href="{{ '../contato/' | relative_url }}">CONTATO</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+

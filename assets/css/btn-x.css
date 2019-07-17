@@ -2,26 +2,27 @@
     display: none;   
 }
 
-@media(max-width: 999px){
-    /*#icone {
+@media(max-width: 800px){
+    
+    #icone {
         width: 77px;
         height: 77px;
         position: relative;
-    }*/
+    }
 
     #icone {
         width: 100%;
         height: 100%;
         position: relative;
         transition: all .2s linear;
+        z-index: 3;
     }
-
+    
     span {
         width: 26px;
         height: 3px;
         
-        top: 30px;
-        left: -40px;
+        top: 25px;
         position: absolute;
         background-color: #fff;
         transition: all .2s linear;
@@ -64,16 +65,14 @@
         border-radius: 50%;
     }
 
-    #check:checked ~ .menu {
+    #check:checked ~ .barra_menu {
         opacity: 1;
-        right: 0;
-        margin-top: 70px;
         transition-delay: .2s;
     }
     
 }
 
-@media(min-width:1000px){
+@media(min-width:799px){
     
     #icone {
         display: none;
