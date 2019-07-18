@@ -2,16 +2,13 @@
 layout: page
 title: "Nice to meet you!"
 date: 2019-07-10 08:44
-descricao: "Primeira postagem do site, preferi me apresentar e falar um pouco sobre mim.. O que acha disso ?"
+descricao: "Primeira postagem do site, preferi me apresentar e falar um pouco sobre mim..."
 ---
 <style>
 p {text-indent: 40px; text-align: justify;font-size:20px;}
 hr{border-bottom: 1px solid black;}
 </style>
 
-<h2>Tá bom !! Vou me apresentar.</h2>
-<hr>
-<br>
 <p>Oi, me chamo André Luis, tenho 47 anos.</p>
 <br>
 <p>Acho engraçado ouvir pessoas com idade por volta dos trinta anos dizendo que são velhas para entrar na área de desenvolvimento de software ou para mudar de profissão, acredito que poucos trabalhos tem essa necessidade de limitação em relação a idade. Então tire essa idéia da cabeça porque isso é pensamento distorcido.</p>

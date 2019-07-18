@@ -55,13 +55,18 @@
  .post__titulo {
      margin: 0;
     
-     color: #00008b;
+     color: #00009b;
      text-align: left;
      
      font-weight: normal;
      font-size: 25px;;
  }
  
+
+ .post__autor {
+
+ }
+
  .post__data {
      margin: 10px 5px;
      color: #00008b;
@@ -72,9 +77,10 @@
  .post__descricao {
      padding: 5px;
      list-style: none;
-     font-size: 16px;
+     font-size: 18px;
      line-height: 22px;
-     color: #00008b;
+     color: #222;
+     /*color: #00008b;*/
      
  }
  

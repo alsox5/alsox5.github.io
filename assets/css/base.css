@@ -34,3 +34,8 @@ body {
 .content {
     flex: 1;
 }
+
+/* Essa classe afeta os blocos onde há comandos nos tutoriais*/
+.highlight {
+    background-color: #d3d3d3;
+}
