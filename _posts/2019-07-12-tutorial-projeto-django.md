@@ -75,7 +75,7 @@ django-admin startproject lista_de_compras .
 
 O diretório deve ficar dessa forma.
 
-![imagem do diretorio com o projeto iniciado](../assets/img/tree_1.png)
+![imagem do diretorio com o projeto iniciado](/assets/img/tree_1.png)
 
 
 Agora vamos testar se tudo que fizemos está correto:

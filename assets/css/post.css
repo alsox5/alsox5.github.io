@@ -19,11 +19,9 @@
     
     padding-left: 15px;
     padding-right: 15px;
-
+   
     background-color: #dce2f5;
     
-    
-
     box-shadow: 5px 5px 5px #444;
     border: 0.5px solid ;
     border-radius: 1%;
@@ -80,7 +78,6 @@
      font-size: 18px;
      line-height: 22px;
      color: #222;
-     /*color: #00008b;*/
      
  }
  
@@ -94,7 +91,6 @@
     text-align: left;
     background-color: white;
     color: #222;
-    /*font-family: Arial, Helvetica, sans-serif;*/
     font-size: 16px;
      
  }

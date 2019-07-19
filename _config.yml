@@ -9,6 +9,7 @@ github_username:  alsox5
 
 # Build settings
 markdown: kramdown
+highlighter: pygments
 permalink: /:year/:month/:day/:title
 theme: minima
 plugins:

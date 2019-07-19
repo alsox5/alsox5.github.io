@@ -8,7 +8,7 @@
 
     background-color: #3f729b;
     box-shadow: 5px 5px 5px #444;
-    z-index: 1;
+    z-index: 100;
 }
 
 .barra_titulo {
@@ -133,7 +133,7 @@
         color: #fff;
     }
 */
-    .menu_item: ul li{  
+    .menu_item:hover ul li{  
         height: auto;
         max-height: 200px;
     } 
