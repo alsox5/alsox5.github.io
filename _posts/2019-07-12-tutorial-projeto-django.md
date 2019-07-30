@@ -181,7 +181,7 @@ python manage.py runserver
 No navegador digite:
 
 ```
-http://127.0.0.1:4000/admin
+http://127.0.0.1:8000/admin
 ```
 
 ### Se aparecer a tela de login, então tudo deu certo até aqui...

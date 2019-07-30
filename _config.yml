@@ -1,5 +1,5 @@
 
-title: Alsox Blog
+title: Alsox5 Blog
 email: alccpe@yahoo.com.br
 description: "Meu site pessoal em fase de desenvolvimento"
 baseurl: "" # Esse vai ser meu www.alsox5.com.br
@@ -9,7 +9,7 @@ github_username:  alsox5
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+#highlighter: pygments
 permalink: /:year/:month/:day/:title
 theme: minima
 plugins:

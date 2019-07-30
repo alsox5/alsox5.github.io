@@ -2,37 +2,30 @@
 layout: default
 ---
 
-<div class="layout-post">
-    <div class="container">
+{% for post in site.posts %}
 
-        <div class="row">
-            {% for post in site.posts %}
+<section class="layout-post">
+    <a  id="link-url" href={{ post.url }}>
+        <article class="post">
 
-            <div class="">
-                <a id="link-url" href={{ post.url }}>
-                    <article class="post">
-
-                        <div class="post__data">
-                            <strong>
-                                {{ post.date | date_to_string }}
-                            </strong>
-                        </div>
-
-                        <h2 class="post__titulo">
-                            <strong>
-                                {{ post.title }}
-                            </strong>
-                        </h2>
-
-                        <div class="post__descricao">
-                            <p>{{ post.descricao }}</p>
-                        </div>
-
-                    </article>
-                </a>
+            <div class="post__data">
+                <strong>
+                    {{ post.date | date_to_string }}
+                </strong>
             </div>
 
-            {% endfor %}
-        </div>
-    </div>
-</div>
+            <h2 class="post__titulo">
+                <strong>
+                    {{ post.title }}
+                </strong>
+            </h2>
+
+            <div class="post__descricao">
+                <p>{{ post.descricao }}</p>
+            </div>
+
+        </article>
+    </a>
+</section>
+{% endfor %}
+    

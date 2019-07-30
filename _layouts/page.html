@@ -1,13 +1,50 @@
 ---
 layout: default
 ---
-<article class="post-content">
+<style>
 
-  <header>
-    <h1 style="text-align:center; border-bottom: 1px solid #444;">
-      {{ page.title | escape }}</h1>
+article {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  max-width: 100%;
+  margin-top: 50px;
+  padding: 10px;
+  background-color: aliceblue;
+  
+}
+
+article header h1 {
+  padding: 10px;
+  font-size: 22px;
+  text-align: center;
+  border-bottom: 1px solid #444;
+
+}
+
+article div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  text-align: left;
+  
+  line-height: 2;
+}
+
+</style>
+
+<article>
+
+  <header >
+    <h1>{{ page.title | escape }}</h1>
   </header>
-  <div style="padding: 0 5px; line-height: 2">
+
+  <div>
     {{ content }}
   </div>
+
 </article>
