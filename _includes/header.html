@@ -1,6 +1,6 @@
 <header class="barra_cabecalho ">
     
-        <div class="barra_logo">
+        <div class="logo">
             <a href="/">Alsox5 Blog</a>
         </div>
 
@@ -9,7 +9,7 @@
         
         <nav class="barra_menu">
             <ul class="menu">
-                <li class="menu_item"><a href="">TUTORIAIS</a>
+                <li class="menu__item"><a href="">TUTORIAIS</a>
                     <ul>
                         <li><a href="">PYTHON</a></li>
                         <li><a href="">DJANGO</a></li>
@@ -18,19 +18,15 @@
                         <li><a href="">DIVERSOS</a></li>
                     </ul>
                 </li>
-                <li class="menu_item"><a href="">PORTIFÓLIO</a>
+                <li class="menu__item"><a href="">PORTIFÓLIO</a>
                     <ul>
                         <li><a href="">FRONTEND</a></li>
                         <li><a href="">BACKEND</a></li>
                     </ul>
                 </li>
-                <li class="menu_item"><a href="{{ '../curriculo/' | relative_url }}">CURRÍCULO</a></li>
+                <li class="menu__item"><a href="{{ '../curriculo/' | relative_url }}">CURRÍCULO</a></li>
                
-                <li class="menu_item"><a href="{{ '../contato/' | relative_url }}">CONTATO</a></li>
+                <li class="menu__item"><a href="{{ '../contato/' | relative_url }}">CONTATO</a></li>
             </ul>
         </nav>
-
-
-            
-
 </header>
