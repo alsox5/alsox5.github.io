@@ -15,12 +15,12 @@
     z-index: 100;
 }
 
-.barra_logo {
+.logo {
     flex: 1;
     margin-left: 20px;
 }
 
-.barra_logo a {
+.logo a {
     color: #eee;
     font-size: 20px;
     font-weight: bold;
@@ -34,14 +34,14 @@
     font-weight: bold;
 }
 
-.menu_item a {   
+.menu__item a {   
     text-align: center;
     background-color: #3f729b;
     color: #fc0;
 }
 
 /* em qualquer estado da tela o destaque do menu sempre será o mesmo */
-.menu_item a:hover {
+.menu__item a:hover {
     background-color: #050542;
     color: #fff;
 }
@@ -54,7 +54,7 @@
         margin-top: 56px;    
     }
 
-    .menu_item {
+    .menu__item {
         display: flex;       
         flex-direction: column;
         border: 0.5px solid #050542;
@@ -62,17 +62,17 @@
 
      /* apenas alinha os titulos para a escquerda dessa forma diferencia do 
      subtitem */
-    .menu_item a {
+    .menu__item a {
         padding: 15px;
         text-align: left;
     }
     
-    .menu_item ul li {
+    .menu__item ul li {
         max-height: 0;
         transition: all .4s;
     }
 
-    .menu_item ul li a {
+    .menu__item ul li a {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -83,12 +83,12 @@
         border: 0.5px solid #050542;
     }
 
-    .menu_item ul li a:hover {
+    .menu__item ul li a:hover {
         background-color: #050542;
         color: #fff;
     }
 
-    .menu_item:hover ul li{  
+    .menu__item:hover ul li{  
         height: auto;
         max-height: 200px;
     } 
@@ -118,28 +118,28 @@
         visibility: hidden;
     }
 
-    .menu .menu_item {
+    .menu .menu__item {
         width: 160px;
     }
 
-    .menu_item > a {
+    .menu__item > a {
         padding: 15px;
     }
 
-    .menu_item > ul {
+    .menu__item > ul {
          padding: 5px;
          text-align: center;
     }
-    .menu_item ul li {        
+    .menu__item ul li {        
         border: 1px solid #050542;
     }
 
-    .menu_item ul li a {
+    .menu__item ul li a {
         display: block;
     }
 
 
-    .menu_item:hover ul {
+    .menu__item:hover ul {
         width: 160px;
         visibility: visible;
     }

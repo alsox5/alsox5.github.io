@@ -1,0 +1,61 @@
+/* cabecalho*/
+
+.cabecalho {
+    margin: 70px auto;
+    text-align: center;
+}
+
+.cabecalho > h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.cabecalho div > img {
+    border: 1px solid #444;
+    width: 160px;
+    margin-bottom: 20px;
+}
+
+.cabecalho > p {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.cabecalho > #autor{
+    border-top: 1px solid #444;
+}
+
+.cabecalho > #cidade {
+    border-bottom: 1px solid #444;
+}
+
+.cabecalho > #cidade, .cabecalho > #fone {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.corpo-curriculo {
+    margin: -10px 15px 0 15px;
+    padding-left: 10px;
+    border-left: 1px solid #444;
+}
+
+/* Resumo */
+
+.resumo > h2, .formacao > h2, 
+.frontend > h2, .backend > h2,
+.experiencia > h2{
+
+    padding: 5px;
+    background-color: #d3d3d3;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+
+}
+
+/* Formação */
+

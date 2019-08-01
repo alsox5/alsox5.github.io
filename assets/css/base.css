@@ -17,9 +17,8 @@ body {
     
 
     /*Cores*/
-    background-color: #a7b9f2;
+    background-color: aliceblue;
     
-
     /*Texto*/
     
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -28,13 +27,6 @@ body {
     /*Outros*/
    
 }
-
-/*
-.content {
-    flex: 1;
-    
-}
-*/
 
 /* Essa classe afeta os blocos onde há comandos nos tutoriais*/
 .highlight {
