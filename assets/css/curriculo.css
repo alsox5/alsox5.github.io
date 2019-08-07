@@ -37,11 +37,27 @@
     font-weight: normal;
 }
 
-.corpo-curriculo {
-    margin: -10px 15px 0 15px;
-    padding-left: 10px;
-    border-left: 1px solid #444;
+@media(min-width: 799px) {
+
+    .corpo-curriculo {
+        margin: -10px 20% 0 20%;
+        padding-left: 10px;
+        border-left: 1px solid #444;
+    }
+    
 }
+
+@media(max-width: 800px) {
+
+    .corpo-curriculo {
+        margin: -10px 15px 0 15px;
+        padding-left: 10px;
+        border-left: 1px solid #444;
+    }
+    
+}
+
+
 
 /* Resumo */
 

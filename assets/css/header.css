@@ -89,7 +89,6 @@
     }
 
     .menu__item:hover ul li{  
-        height: auto;
         max-height: 200px;
     } 
 
