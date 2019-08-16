@@ -1,18 +1,53 @@
 {
-    "name": "Alsox5 Blog",
-    "short_name": "Alsox5",
-    "theme_color": "#3f729b",
-    "background_color": "#f0f8ff",
-    "display": "standalone",
-    "scope": "/",
-    "start_url": "/?utm_source=homescreen",
-    "lang": "pt-BR",
-    "orientation": "any",
-    "icons": [
-        {
-            "src": "/assets/img/icons/favicon-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ]
+  "name": "Alsox5 Blog",
+  "short_name": "Alsox5",
+  "theme_color": "#3f729b",
+  "background_color": "#f0f8ff",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": "/?utm_source=homescreen",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "../assets/img/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "../assets/img/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "../assets/img/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "../assets/img/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "../assets/img/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "../assets/img/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "../assets/img/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "../assets/img/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": true
 }

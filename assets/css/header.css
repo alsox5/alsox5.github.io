@@ -12,19 +12,19 @@
 
     background-color: #3f729b;
     box-shadow: 5px 5px 5px #444;
-    z-index: 100;
+    z-index: 5;
 }
 
 .logo {
     flex: 1;
+    margin-top: 13px;
     margin-left: 20px;
 }
 
-.logo a {
-    color: #eee;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 50px;
+.logo img {
+    width: 100px;
+    height: 33px;
+
 }
 
 .barra_menu {
@@ -37,13 +37,13 @@
 .menu__item a {   
     text-align: center;
     background-color: #3f729b;
-    color: #fc0;
+    color: #fff;
 }
 
 /* em qualquer estado da tela o destaque do menu sempre será o mesmo */
 .menu__item a:hover {
-    background-color: #050542;
-    color: #fff;
+    color: #050542;
+    
 }
 @media(max-width: 800px) {
     
@@ -57,7 +57,6 @@
     .menu__item {
         display: flex;       
         flex-direction: column;
-        border: 0.5px solid #050542;
     }
 
      /* apenas alinha os titulos para a escquerda dessa forma diferencia do 
@@ -80,7 +79,7 @@
         color: #050542;
         background-color: #fff;
 
-        border: 0.5px solid #050542;
+        border: .5px solid #050542;
     }
 
     .menu__item ul li a:hover {
@@ -129,10 +128,7 @@
          padding: 5px;
          text-align: center;
     }
-    .menu__item ul li {        
-        border: 1px solid #050542;
-    }
-
+   
     .menu__item ul li a {
         display: block;
     }

@@ -1,7 +1,9 @@
 <header class="barra_cabecalho ">
     
         <div class="logo">
-            <a href="/">Alsox5 Blog</a>
+            <a href="/">
+                <img src="{{'../assets/img/alsox5_logo_white.png'| relative_url}}" alt="">
+            </a>
         </div>
 
         <input type="checkbox" id="check">
@@ -9,15 +11,7 @@
         
         <nav class="barra_menu">
             <ul class="menu">
-                <li class="menu__item"><a href="">TUTORIAIS</a>
-                    <ul>
-                        <li><a href="">PYTHON</a></li>
-                        <li><a href="">DJANGO</a></li>
-                        <li><a href="">HTML5 - CSS3</a></li>
-                        <li><a href="">JAVASCRIPT</a></li>
-                        <li><a href="">DIVERSOS</a></li>
-                    </ul>
-                </li>
+                
                 <li class="menu__item"><a href="">PORTIFÓLIO</a>
                     <ul>
                         <li><a href="">FRONTEND</a></li>
@@ -25,7 +19,7 @@
                     </ul>
                 </li>
                 <li class="menu__item"><a href="{{ '../curriculo/' | relative_url }}">CURRÍCULO</a></li>
-               
+                <li class="menu__item"><a href="{{'http://www.conhecimentodigital.com.br/hotsite/front_end_i_2'}}" target="_blanck">CURSOS</a></li> 
                 <li class="menu__item"><a href="{{ '../contato/' | relative_url }}">CONTATO</a></li>
             </ul>
         </nav>
