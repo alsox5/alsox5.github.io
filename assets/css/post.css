@@ -2,10 +2,18 @@
            Post
 \*--------------------*/
 
-.post-direcao-default {
-    display: flex;   
-        
+.post__default--direcao {
+    display: flex;
+    flex-direction: column;   
+    flex-wrap: wrap;
 }
+
+.post__default_home--direcao {
+    display: flex;
+    flex-direction: row;   
+    flex-wrap: wrap;
+}
+
 
 .layout-post {
     flex: 1;
@@ -74,14 +82,19 @@
     font-size: 16px;
      
  }
+
+ /* Dispositivos Moveis */
+ @media(max-width:800px){
+    
+    .post {
+        margin-left: 15px;
+        max-width: 85%;
+     }
+ 
   
+ /* Dispositivos grandes */
  @media(min-width:799px){
-
-    .post-direcao-default {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
+    
     #link-url {      
         flex: 1; 
         display: flex;
@@ -96,17 +109,5 @@
      }
  }
 
- @media(max-width:800px){
-    
-    .post-direcao-default {
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
-    .post {
-        margin-left: 15px;
-        max-width: 85%;
-     }
-     
-     
+         
 }

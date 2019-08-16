@@ -1,42 +1,7 @@
 ---
 layout: default
+comments: true 
 ---
-<style>
-
-article {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-
-  max-width: 100%;
-  margin-top: 50px;
-  padding: 10px;
-  background-color: aliceblue;
-  
-}
-
-article header h1 {
-  padding: 10px;
-  font-size: 22px;
-  text-align: center;
-  border-bottom: 1px solid #444;
-
-}
-
-article div {
-  display: flex;
-  flex-direction: column;
-  /*flex-wrap: wrap;*/
-
-  width: 100%;
-
-  text-align: left !important;
-  padding-right: 30px;
-  line-height: 2;
-}
-
-</style>
-
 
 <article>
 
@@ -44,8 +9,30 @@ article div {
     <h1>{{ page.title | escape }}</h1>
   </header>
 
-  <div>
-    {{ content }}
-  </div>
 
+    {{ content }}
+
+
+      <div id="disqus_thread"></div>
+      
+      <script>
+      var disqus_config = function () {
+          this.page.url = '{{ site.url }}{{ site.baseurl }}{{ page.url }}';
+
+          this.page.identifier = '{{ page.url }}'; 
+
+          };
+
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+
+          s.src = 'https://alsox5.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
 </article>
