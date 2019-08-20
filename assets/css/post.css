@@ -8,16 +8,9 @@
     flex-wrap: wrap;
 }
 
-.post__default_home--direcao {
-    display: flex;
-    flex-direction: row;   
-    flex-wrap: wrap;
-}
-
-
 .layout-post {
-    flex: 1;
-    margin-top: 100px;    
+    margin-top: 100px;  
+
 }
 
 .post {  
@@ -31,7 +24,7 @@
     
     box-shadow: 5px 5px 5px #444;
     border: 0.5px solid ;
-    border-radius: 4px;
+    border-radius: 12px;
  }
 
  .post:hover {
@@ -69,45 +62,47 @@
      text-align: center;
  }
 
- .post-content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-
-    margin: 90px 6px 0 6px;
-    padding: 0 10px;
-    text-align: left;
-    background-color: white;
-    color: #222;
-    font-size: 16px;
-     
- }
-
  /* Dispositivos Moveis */
  @media(max-width:800px){
+
+    .post__default_home--direcao {
+        display: flex;
+        flex-direction: column;   
+        flex-wrap: wrap;
+    }
+    
     
     .post {
         margin-left: 15px;
-        max-width: 85%;
+        max-width: 85vw;
+        
      }
- 
-  
+}
+
  /* Dispositivos grandes */
  @media(min-width:799px){
     
+    /*
     #link-url {      
         flex: 1; 
         display: flex;
         flex-wrap: wrap;  
     }
+    */
+
+    .post__default_home--direcao {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+         
+        
+    }
+    
 
     .post {
         margin-left: 30px;
         margin-right: 30px;
         width: 350px;
-
-     }
+    }
  }
 
-         
-}
