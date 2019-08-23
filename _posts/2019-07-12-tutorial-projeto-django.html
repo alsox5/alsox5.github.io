@@ -3,190 +3,236 @@ layout: page
 title:  "Parte I: Construa um Sistema Web com Django 2.x"
 date:   2019-07-12 21:21
 descricao: "Criando diretório do projeto, virtualenv, o projeto, primeiro APP, modelo das tabelas, executando migrações e crie o usuário admin."
+categoria: "django"
 ---
 
 <div class="container">
 
     <div class="page__foto">
-        <img src="/assets/img/turorial_1.jpeg" alt="">
+        <img src="/assets/img/django1.jpg" alt="">
     </div>
 
     <div class="page__dados">
         <img src="/assets/img/andre-3x4.jpg" alt="andré Luis">
        <span>
-        <p>por: André luís</p>
-        <p>data: 12/07/2019</p>
+        <p>POR: André luís</p>
+        <p>DATA: 12/07/2019</p>
        </span>
    </div>
 
    <hr class="page__separador">
 
-   <article class="page__artigo">
+    <article class="page__artigo">
+        <h2 class="page__h2">Como será o formato dos tutoriais do blog ? </h2>
+        <p>A partir daqui vou iniciar uma série de tutoriais, com o objetivo de desenvolver um sistema em django, o sistema será uma lista de compras.</p>
+        <p>Para fazer os tutoriais no formato que vocês vão ver, eu parti do principio que você já está familiarizado com o python e sua sintaxe e tem ao menos noções básicas no framework django.</p>
+        <p>Todos nossos tutoriais são no formato passo a passo e cem porcento mão na massa, com pouca ou quase nenhuma teoria. Deixo claro aqui que o aprendizado para ser completo deve ter a união da teoria com a prática.</p>
+        <p>Por tanto, pré suponho que você já tem essa teoria basica ou vai busca-la após aprender a prática com nossos tutoriais.</p>
+        <p>Mas se surgir dúvidas e erros na montagem do sistema, peço que entre em contato comigo, que estarei a sua disposição para tirar qualquer dúvida sobre o sistema, sobre python e ou sobre django.</p>
+        <p>O projeto lista de compras será backend. Porém vou fornecer uma interface exclusiva feita por mim em html5, css3 e javascript sem a ajuda de frameworks como bootstrap e etc.</p>
+        <p>Num tutorial mais a frente eu indico o repositório no github para você baixar a interface e mostro passo a passo como integrar o frontend ao backend e assim completar sistema totalmente.</p>
+
+        <p>Depois dessa apresentação, o que você vai ter daqui pra frente será um passo a passo testado e funcional.</p>
+
         <h2 class="page__h2">Tutorial - 001: Usando o terminal.</h2>
 
-        <p>Vamos criar o diretorio <strong>projeto-lista-compras</strong> , onde vamos armazenar todo código fonte do sistema,  para isso digite:<p>
+        <p>Vamos criar o diretorio <strong>projeto-lista-de-compras</strong> , onde vamos armazenar todo código fonte do sistema,  para isso digite:<p>
 
-        <div class="page__code">            
-            <p>mkdir  projeto-lista-compras</p>
-            <p>projeto-lista-compras</p>
-        </div>
+        
+        <pre class="page__code">
+        <code>
+        mkdir  projeto-lista-de-compras
+        cd projeto-lista-de-compras
+        </code>
+        </pre>
 
 
-        <p> Instale o virtualenv, caso você ainda não tenha</p>
+        <p> Estando no diretório que acabamos de criar instale o virtualenv, caso você ainda não o tenha, digite:</p>
 
-        <div class="page__code">
-            <p>pip install virtualenv</p>
-        </div>
+        <pre class="page__code">
+        <code>
+         pip install virtualenv
+        </code>
+        </pre>
 
-        <p>Para criar um ambiente virtual com o nome de .lista</p>
+        <p>E para criar um ambiente virtual com o nome de .lista</p>
 
-        <p>- No Windows</p>
+        <p>No Windows:</p>
 
-        <div class="page__code">
-            <p>virtualenv .lista</p>
-            <p>.lista\Scripts\activate</p>
-        </div>
+        <pre class="page__code">
+        <code>
+        virtualenv .lista
+        .lista\Scripts\activate
+        </code>
+        </pre>
 
-        <p>- No Linux</p>
+        <p>No Linux:</p>
 
-        <div class="page_code">
-            <p>virtualenv .lista</p>
-            <p>source .lista/bin/activate</p>
-        </div>
+        <pre class="page__code">
+        <code>
+        virtualenv .lista
+        source .lista/bin/activate
+        </code>
+        </pre>
 
-        <p> Depois de criada e ativada a virtualenv, vamos instalar o Django.  </p>
+        <p>Depois de criada e ativada a virtualenv, vamos instalar o Django. </p>
 
-        <div class="page__code">
-            <p>pip install django</p>
-        </div>
+        <pre class="page__code">
+        <code>
+        pip install django
+        </code>
+        </pre>
         
         <p>Já podemos criar nosso primeiro projeto.</p>
 
-        <div class="page__code">
-            <p>django-admin startproject lista_de_compras . </p>
-        </div>
+        <pre class="page__code">
+        <code>
+        django-admin startproject lista_de_compras . 
+        </code>
+        </pre>
 
 
-        <p> Obs.: Digite os comandos conforme está ai no quadro anterior, com esse ponto no final dando um espaço.</p>
+        <p>Obs.: Digite os comandos conforme está ai no quadro anterior, com esse ponto no final dando um espaço.</p>
 
         <p> O diretório deve ficar dessa forma.</p>
 
-        <div class="page__foto">
+        <div>
                 <img src="/assets/img/tree_1.png" alt="">
         </div>
         
         <p>Agora vamos testar se tudo que fizemos está correto:</p>
 
-        <div class="page__code">
-            <p>python manage.py runserver</p>
-        </div>
+        <pre class="page__code">
+        <code>
+        python manage.py runserver
+        </code>
+        </pre>
+        
         
         <h2 class="page__h2">Primeiro APP do sistema.</h2>
         
 
         <p>Um sistema em django é composto por varios apps, e para criar um APP de forma automatica, digite:</p>
 
-        <div class="page_code">
-            <p>python manage.py startapp core </p>
-            
-        </div>
+        <pre class="page__code">
+        <code>
+        python manage.py startapp core 
+        </code>    
+        </pre>
 
         <p>Obs.: core será o nosso primeiro app, poderia ter outro nome. </p>
 
 
         <h2 class="page__h2">
-            Nova etapa : Vamos usar uma IDE, aqui no tutorial usarei pycharm.
+            Nova etapa : Vamos usar uma IDE, aqui no tutorial usarei o pycharm.
         </h2> 
         
         <p>Entre no pycharm, abrá a pasta <strong>lista_de_compras</strong>, nela você encontra o arquivo <strong>senttings.py</strong>, vá até <strong>INSTALLED_APPS []</strong> e insira a instrução <strong>'core'</strong> no final da lista de acordo com a imagem abaixo:</p>
 
-<div class="page__code">
- <p> INSTALLED_APPS = [</p>
- <p> 'django.contrib.admin', </p>
- <p> 'django.contrib.auth', </p>
- <p> 'django.contrib.contenttypes', </p>
- <p> 'django.contrib.sessions', </p>
- <p> 'django.contrib.messages', </p>
- <p> 'django.contrib.staticfiles', </p>
- <p> 'core',</p>
- <p>]</p>
-</div>
+        <pre class="page__code">
+        <code> 
+            INSTALLED_APPS = [
+                'django.contrib.admin', 
+                'django.contrib.auth', 
+                'django.contrib.contenttypes', 
+                'django.contrib.sessions', 
+                'django.contrib.messages', 
+                'django.contrib.staticfiles', 
+                'core',
+            ]
+        </code>
+        </pre>
 
 
+        <p>Feito isso vamos criar o modelo das tabelas Categoria, Produto e LocalDaCompra.
+            Vá para o diretório core, abra o arquivo models.py e digite:</p>
 
-Feito isso vamos criar o modelo da tabela Produto e Categoria,
-vá para o diretório core, abra o arquivo models.py e digite:
+        <pre class="page__code">
+        <code>
+        from django.db import models
+        
+        class Categoria(models.Model):
+            name = models.CharField('Nome', max_length=100)
+            slug = models.CharField('Identificador', max_length=100)
+            created = models.DateTimeField('Criado em', auto_now_add=True)
+            modified = models.DateTimeField('Modificado em', auto_now=True)
+    
 
-```
+        class Produto(models.Model):
+            name = models.CharField('Nome', max_length=100)
+            slug = models.CharField('Identificador', max_length=100)
+            category = models.ForeignKey(Category, verbose_name='Categoria', on_delete=True)
+            description = models.TextField('Descrição', blank=True)
+            created = models.DateTimeField('Criado em', auto_now_add=True)
+            modified = models.DateTimeField('Modificado em', auto_now=True)
+    
+        class LocalDaCompra(models.Model):
+            nome_fantasia = models.CharField("Nome Fantasia", max_length=100)
+        </code>
+        </pre>
 
-from django.db import models
+        <p>
+            Precisamos registrar esses models no django admin, então ainda no
+            diretório core abra o arquivo admin.py e digite:
+        </p>
 
-class Categoria(models.Model):
-    descricao = models.CharField(max_length=80)
+        <pre class="page__code">
+        <code> 
+        from django.contrib import admin
+        from core.models import Produto, Categoria, LocalDaCompra
+
+        admin.site.register(Produto)
+        admin.site.register(Categoria)
+        admin.site.register(LocalDaCompra)
+        </code>
+        </pre>
+
+        <p>Agora precisamos criar os arquivos de migração e aplicar as migrações
+        no banco de dados para isso acesse o terminal pela sua IDE ou pelo sistema operacional e digite:</p>
 
 
-class Produto(models.Model):
-    descricao = models.CharField(max_length=80)
-    preco = models.DecimalField(max_digits=10, decimal_places=2)
-    quantidade = models.IntegerField()
+        <pre class="page__code">
+        <code>
+        python manage.py makemigrations
+        python manage.py migrate
+        </code>
+        </pre>
 
-```
+        <p>Criando o usuário admin para acessar o django Admin:</p>
+
+        <pre class="page__code">
+        <code> 
+        python manage.py createsuperuser
+        </code>
+        </pre>
+
+        <p>Obs.: O sistema solicita cadastro de usuário e senha</p>
 
 
-Precisamos registrar esses models no django admin, então ainda no
-diretório core abra o arquivo admin.py e digite :
+        <h2 class="page__h2">
+            Agora vamos testar o que já fizemos.
+        </h2>
 
-```
+        <pre class="page__code">
+        <code>
+        python manage.py runserver
+        </code>
+        </pre>
 
-from django.contrib import admin
-from core.models import Produto, Categoria
+        <p>No navegador digite:</p>
 
-admin.site.register(Produto)
-admin.site.register(Categoria)
+        <pre class="page__code">
+        <code>
+        http://127.0.0.1:8000/admin
+        </code>
+        </pre>
 
-```
+        <p>Deve aparecer a tela de login, então tudo deu certo até aqui...</p>
+        <p>Digite o login e senha que você acabou de criar e acesse o Django admin.</p>
 
-Agora precisamos criar os arquivos de migração e aplicar as migrações
-no banco de dados para isso acesse o terminal pela sua IDE ou pelo sistema operacional :
+        <h2 class="page__h2">
+            No próximo tutorial, faremos algumas alterações para personalizar a interface do django admin.
+        </h2>
 
-```
-
-python manage.py makemigrations
-
-python manage.py migrate
-
-```
-
-Criando o usuario admin para acessar o django Admin:
-
-```
-
-python manage.py createsuperuser
-
-```
-#### Obs.: o sistema pede pra que você cadastre o usuario e a senha
-
-## Agora vamos testar o que já fizemos.
-
-```
-
-python manage.py runserver
-
-```
-
-No navegador digite:
-
-```
-http://127.0.0.1:8000/admin
-```
-
-### Se aparecer a tela de login, então tudo deu certo até aqui...
-
-Digite o login e senha que você acabou de criar e acesse o Django admin.
-
-## ... Continua na PARTE II da série !!!
-<br>
-<br>
-<br>
-</article>
+    </article>
 </div>

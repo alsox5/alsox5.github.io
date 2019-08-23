@@ -9,20 +9,37 @@ layout: default_home
         <article class="post">
 
             <div class="post__data">
+                <p>
                 <strong>
                     {{ post.date | date_to_string }}
                 </strong>
+            </p>
             </div>
 
             <h2 class="post__titulo">
+                <p>
                 <strong>
                     {{ post.title }}
                 </strong>
+            </p>
             </h2>
 
             <div class="post__descricao">
                 <p>{{ post.descricao }}</p>
             </div>
+
+            
+                {% if post.categoria == "django" %}
+                <div class="post__tipo verde">
+                     <span>{{post.categoria}}</span>
+                </div>
+                {% elsif post.categoria == "misc" %}  
+                <div class="post__tipo amarelo">
+                        <span>{{post.categoria}}</span>
+                   </div>
+                {% endif %}
+            </div>
+            
 
         </article>
     </a>

@@ -1,0 +1,197 @@
+---
+layout: page
+title:  "Parte II: Construa um Sistema Web com Django 2.x"
+date:   2019-07-17 16:37
+descricao: "Customizando o Django admin. O objetivo é entregar ao cliente um painel administrativo personalizado."
+categoria: "django"
+---
+
+
+<div class="container">
+
+    <div class="page__foto">
+        <img src="/assets/img/7.jpeg" alt="">
+    </div>
+
+    <div class="page__dados">
+        <img src="/assets/img/andre-3x4.jpg" alt="andré Luis">
+       <span>
+        <p>POR: André luís</p>
+        <p>DATA: 17/07/2019</p>
+       </span>
+   </div>
+
+   <hr class="page__separador">
+
+   <article class="page__artigo">
+
+
+        <h2 class="page__h2">TUTORIAL 002</h2>
+
+        <p>Depois de executar os procedimentos do tutorial anterior, o django admin surge pronto pra ser utilizado. Mas como é um painel gerado automatico via sistema, então ele se apresenta com uma interface genérica.</p>
+
+        <h2 class="page__h2">Então vamos customizar o máximo possível.</h2>
+            
+        <p> 
+            Observação:
+        </p>
+        <p>
+            Caso você tenha mais dicas para personalizar esse modulo. Basta mandar uma mensagem pelo formulário de contato. Eu faço a inclusão da sua sugestão e aqui no tutorial eu vou citar que foi você quem contribuiu com aquele código.
+        </p>
+
+        <p>
+            Prosseguindo, use a IDE de sua preferência, para fazer esse projeto utilizei o  Pycharm.
+        </p>
+  
+
+        <h2 class="page__h2">Traduzindo os textos do Django admim para português.</h2> 
+
+        <p>
+            Abra o arquivo settings.py que está em lista_de_compras, vá até o fim do arquivo e localize a variavel LANGUAGE_CODE e deixe o codigo conforme a imagem abaixo:
+        </p>
+
+        
+        <pre class="page__code">
+        <code>
+        LANGUAGE_CODE = 'pt-br'
+        </code>
+        </pre>
+
+        <h2 class="page__h2">Customizando o título dos grupos.</h2>
+
+        <p>
+            No django admin as tabelas Categoria, Produto e LocalDaCompra, aparecem no grupo core, que é a app onde foi criado os modelos das mesmas. Mas o usuário não precisa ver isso, podemos personalizar esse título mudando para 'Arquivos de Cadastro' ou o que você achar melhor.
+        </p>
+
+        <p>Para isso vá até o arquivo apps.py na pasta core e acrescente a linha com o verbose_name.</p>
+
+<pre class="page__code">
+<code>
+from django.apps import AppConfig
+
+class CoreConfig(AppConfig):
+    name = 'core'
+    verbose_name = 'Arquivos de Cadastro'                       
+</code>
+</pre>
+
+        <p>Ainda tem mais, para que essa mudança se reflita no django admin, vá até o arquivo settings.py do diretorio lista_de_compras e modifique a variavel INSTALLED_APPS para que fique conforme abaixo.</p>
+
+<pre class="page__code">
+<code>
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'core.apps.CoreConfig',
+    ]                    
+</code>
+</pre>
+
+        <h2 class="page__h2">Melhorando a apresentação dos dados.</h2>
+        
+        <p>Ao cadastrar uma categoria, produto ou local de compra, não aparece com a descrição que colocamos e sim Categoria object (1) ,Produto object (1) ou LocalDaCompra object (1)</p>
+
+        <p>O título dos campos das tabelas precisa ser customizado e há mais outra alteração à fazer que é fixar um titulo mais adequado para cada tabela.</p>
+
+        <p>No aquivo models.py no diretório core, modifique para fique da seguinte forma:</p>
+
+<pre class="page__code">
+<code>
+        from django.db import models
+
+class Categoria(models.Model):
+    name = models.CharField('Nome', max_length=100)
+    slug = models.CharField('Identificador', max_length=100)
+    created = models.DateTimeField(
+        'Criado em', auto_now_add=True)
+    modified = models.DateTimeField(
+        'Modificado em', auto_now=True)
+    
+    class Meta:
+        verbose_name = 'Categoria'
+        verbose_name_plural = 'Categorias'
+        ordering = ['name']
+
+    def __str__(self):
+        return self.name
+
+class Produto(models.Model):
+    name = models.CharField('Nome', max_length=100)
+    slug = models.CharField('Identificador', max_length=100)
+    category = models.ForeignKey(Category,
+    verbose_name='Categoria', on_delete=True)
+    description = models.TextField(
+        'Descrição', blank=True)
+    created = models.DateTimeField(
+        'Criado em', auto_now_add=True)
+    modified = models.DateTimeField(
+        'Modificado em', auto_now=True)
+
+    class Meta:
+        verbose_name = 'Produto'
+        verbose_name_plural = 'Produtos'
+        ordering = ['name']
+
+    def __str__(self):
+        return self.name
+
+class LocalDaCompra(models.Model):
+    fantasy_name = models.CharField("Nome Fantasia",
+    max_length=100)
+
+
+    class Meta:
+        verbose_name = 'Supermercado'
+        verbose_name_plural = 'Supermercados'
+        ordering = ['name']
+
+
+    def __str__(self):
+        return self.fantasy_name
+</code>
+</pre>
+
+        <h2 class="page__h2">Alterando o título da tela de login e do cabeçalho do django admin.</h2>
+
+        <p>
+            Quando o usuário faz o login, o título da janela está com 'Administração do Django', e depois de logar, o título do cabeçalho do django admin também. Para customizar com o nome do sistema que estamos criando, faça assim:
+        </p>
+
+        <p>
+            No mesmo nível do diretório lista_de_compras crie o diretório <strong>templates</strong>. Dentro desse crie um com o nome <strong>admin</strong>, dentro do diretório admin crie um arquivo com o nome de <strong>base_site.html</strong> com o código abaixo:
+        </p>
+
+        <div class="page__img">
+            <img src="/assets/img/base_admin.jpeg" alt="">
+        </div>
+        
+        <p>
+            Ainda tem mais, para que essas mudanças sejam aplicadas, vá para o arquivo settings.py e na variável TEMPLATES faça conforme abaixo:
+        </p>
+
+<pre class="page__code">
+<code>
+TEMPLATES = [
+{
+    'BACKEND': 'django.template.backends.django.DjangoTemplates',
+    'DIRS': ['templates'],
+    'APP_DIRS': True,
+    'OPTIONS': {
+        'context_processors': [
+            'django.template.context_processors.debug',
+            'django.template.context_processors.request',
+            'django.contrib.auth.context_processors.auth',
+            'django.contrib.messages.context_processors.messages',
+        ],
+    },
+},
+]                
+</code>
+</pre>
+
+</article>
+</div>

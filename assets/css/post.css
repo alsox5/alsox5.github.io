@@ -14,28 +14,35 @@
 }
 
 .post {  
+    position: relative;
     margin-bottom: -70px; 
     height: 300px;
       
     padding-left: 15px;
     padding-right: 15px;
    
-    background-color: #dce2f5;
+    /*background-color: #dce2f5;*/
+    background-color: #192734;
     
     box-shadow: 5px 5px 5px #444;
-    border: 0.5px solid ;
-    border-radius: 12px;
+    /*border: 0.5px solid ;*/
+    border: 0.5px solid #8899a6 ;
+    border-radius: 4px;
  }
 
- .post:hover {
-    background-color: #c3cbe3;
+ .post:hover p{
+    /*background-color: #c3cbe3;*/
+    color: #1fa1f2;
+    
  }
 
 
  .post__titulo {
      margin: 0;
     
-     color: #00009b;
+     /*color: #00009b;*/
+     color: #8899a6;
+
      text-align: left;
      
      font-weight: normal;
@@ -44,7 +51,9 @@
  
  .post__data {
      margin: 10px 5px;
-     color: #00008b;
+     /*color: #00008b;*/
+     color: #8899a6;
+
      text-align: left;
      font-size: 16px;   
  }
@@ -54,12 +63,35 @@
      list-style: none;
      font-size: 18px;
      line-height: 22px;
-     color: #222;
+     /*color: #222;*/
+     color: #8899a6;
      
  }
  
  .post__descricao > li {
      text-align: center;
+ }
+
+ .post__tipo {
+     position: absolute;
+     left: 15px;
+     bottom: 15px;
+     width: 60px;
+     height: 60px;
+     line-height: 60px;
+     text-align: center;
+     color: white;
+     font-weight: bold;
+     border-radius: 50px;
+ }
+
+ .post__tipo.verde {
+    background: #478065;
+ }
+
+ .post__tipo.amarelo {
+     background-color: yellow;
+     color: black;
  }
 
  /* Dispositivos Moveis */

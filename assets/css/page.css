@@ -1,6 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 
@@ -10,14 +11,14 @@
     
 }
 
-.page__foto img {
-    max-width: 100vw;
-    height: 50vh;
+.page__foto > img {
+    width: 98%;
+    height: 70vh;
     margin-left: 5px;
 }
 
 .page__dados {
-    max-width: 200px;
+    max-width: 220px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -30,8 +31,9 @@
 }
 
 .page__dados > img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
     border-radius: 50%;
 }
 
@@ -40,13 +42,16 @@
     text-indent: 40px;
     text-align: left;
     font-size: 18px;
+    color: #fff;
 }
 
-.page__artigo > p {
+.page__artigo > p , #disqus_thread{
     margin: 0 30px 20px 30px;
 }
 
 .page__h2 {
+    text-indent: 0;
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -56,20 +61,47 @@
 }
 
 .page__code  {
-    max-width: 85vw;
+    text-indent: 0;
+    max-width: 90vw;
     margin-left: 10px;
+    margin-bottom: 20px;
     background-color: #d3d3d3; 
 }
 
-.page__code > p {
+.page__code > code {
+    font-size: 10px;
     margin: 5px ;
     color: #444;
 }
 
-/* Tela Maiores */
+.page__img > img {
+    max-width: 80%;
+    padding: 0;
+}
 
+@media(max-width: 800px) {
+
+    
+}
+
+/* Tela Maiores */
 @media(min-width: 799px) {
-    .container  {
-        margin: 0 20% 20%;
-    }   
+    .container, #disqus_thread {
+        margin: 0 20% 0 20%;
+    }
+    
+    .page__h2 {
+        text-indent: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .page__h2 {
+        margin-bottom: 20px;
+    }
+    
+    .page__code > code {
+        font-size: 16px;
+    }
+  
 }
